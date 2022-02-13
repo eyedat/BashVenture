@@ -8,55 +8,55 @@ clear
 sed -i='' 's/on/off/' ../logic/leverlogic.ben
 
 # Initialise the Title Art
-file1="../art/titleart.ben"
+file1="../art/bigfinish.ben"
 while IFS= read -r line
 do
     echo "$line"
 done <"$file1"
 echo
 sleep 1
-echo "You swallow the pill, and suddenly rainbows are all around you."
+echo "Du schluckst die Pille und plötzlich sind überall Regenbögen um dich herum."
 echo
 sleep 4
-echo "You look down to find that you're riding a unicorn. On a rainbow."
+echo "Du schaust nach unten und siehst, dass du auf einem Einhorn reitest. Auf einem Regenbogen."
 sleep 3
 echo
-echo "A motherfucking UNICORN."
+echo "Ein verdammtes EINHORN."
 sleep 4
 echo
-echo "This is ridiculous. Surely this is some kind of dream? You pinch"
-echo "yourself to try and wake up. Wait, you're feeling dizzy..."
+echo "Das ist lächerlich. Das ist doch sicher eine Art Traum? Du kneifst dich"
+echo "selbst und versuchst aufzuwachen. Warte, dir ist schwindelig..."
 echo
 sleep 5
-echo "You blink, and are surprised to find yourself laying in bed."
-echo "You check your phone - it's 5am, and definitely Thursday. Huh."
-echo "I guess it was all a dream."
+echo "Du blinzelst und bist überrascht, dass du im Bett liegst."
+echo "Du schaust auf dein Handy – es ist 5 Uhr morgens und definitiv Donnerstag. Hm."
+echo "Ich schätze, es war alles ein Traum."
 echo
 sleep 7
-echo "You go to get out of bed and suddenly spot a tiny marbel figurine on"
-echo "your bedside table. It's a beautifully carved kitten."
+echo "Du gehst aus dem Bett und erblickst plötzlich eine winzige Marmorfigur auf"
+echo "deinem Nachttisch. Es ist ein wunderschön geschnitztes Kätzchen."
 echo
 sleep 5
-echo "How the hell did that get there?"
+echo "Wie zum Teufel ist das dahin gekommen?"
 sleep 5
 echo
-echo "Unable to work out what is dream and what is reality, you shrug your"
-echo "shoulders and pick up the figurine. It hasn't transported you anywhere"
-echo "this time... but how did it get here? What does it mean?"
+echo "Unfähig herauszufinden, was Traum und was Realität ist, zuckst du mit den Schultern"
+echo "und hebst die Figur auf. Es hat dich nirgendwohin transportiert"
+echo "dieses Mal... aber wie ist es hierher gekommen? Was bedeutet das?"
 echo
 sleep 7
-echo "Your phone buzzes. It's a call from a withheld number. You don't usually"
-echo "answer those, but you get the feeling that this call might be important."
+echo "unser Telefon summt. Es ist ein Anruf von einer unterdrückten Nummer. Normalerweise "
+echo "gest dann du nicht ran, aber du hast das Gefühl, dass dieser Anruf wichtig sein könnte."
 sleep 5
 echo
-echo "You answer the call, and an electronic voice says five words to you"
+echo "Sie nehmen den Anruf an und eine elektronische Stimme sagt Ihnen vier Worte"
 echo "before the line goes dead."
 sleep 3
 echo
-echo "Just five words."
+echo "Nur vier Worte."
 sleep 7
 echo
-echo "THE KITTEN IS WATCHING YOU."
+echo "DAS KÄTZCHEN BEOBACHTET DICH."
 echo
 sleep 9
 echo
@@ -76,10 +76,10 @@ do
     echo "$line"
 done <"$file1"
 echo
-echo "Thank you for playing the demo of BashVenture. Pretty random storyline, I know,"
-echo "but the aim was to show off the functionality, not win a pulitzer prize."
+echo "Vielen Dank, dass Sie die Demo von BashVenture spielen. Ziemlich zufällige Geschichte, ich weiß,"
+echo "aber das Ziel war es, die Funktionalität zu demonstrieren, nicht einen Pulitzer-Preis zu gewinnen."
 echo 
-echo "Whoever you are, wherever you're from - live long and prosper. Keep smiling!"
+echo "Wer auch immer Sie sind, woher Sie auch kommen – leben Sie lang und in Wohlstand. Bewahren Sie Ihr lächeln!"
 echo
 echo "                                                                - @BenNunney"
 echo

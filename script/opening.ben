@@ -1,24 +1,15 @@
-You've gone to sleep before. Lots of times, in fact.
-But last night it was... different. You felt like you were
-moving - being transported somehow over a great distance.
-It felt like you were half awake, but unable to open your
-eyes. Finally, you hear your alarm. It's time to wake up.
+Du bist schon einmal schlafen gegangen. Tatsächlich oft.
+Aber letzte Nacht war es... anders. Du fühltest dich als wärst du 
+gereist - irgendwie über eine große Entfernung transportiert worden.
+Es fühlte sich an, als wärst du halb wach, aber nicht in der Lage, die Augen zu öffnen. 
+Schließlich hören Sie Ihren Wecker. Es ist Zeit aufzuwachen.
 
-During this adventure, I will be your eyes and hands.
-Available commands are:
-
-'n' for north,
-'s' for south,
-'e' for east,
-'w' for west,
-'u' for use,
-'h' for hug.
-
-Ctrl-C quits.
-
+Während dieses Abenteuers werde ich deine Augen und Hände sein.
+        
+BashVenture wurde von Ben Nunney geschrieben. Es ist als ein 
+Framework gedacht, mit dem andere Leute herumhacken und es erweitern können.
+Umarmungen und Liebe an Will Crowther und Don Woods für die Erstellung &
+Portierung des ursprünglichen Colossal Cave-Abenteuers in die 70er Jahre.
   - - -
-BashVenture was written by Ben Nunney. It's intended as
-a framework for other people to hack around with and extend.
-Hugs and love to Will Crowther and Don Woods for creating &
-porting the original Colossal Cave 'adventure' back in the 70s.
-  - - -
+Überschreiben von Nils Surowietz.
+

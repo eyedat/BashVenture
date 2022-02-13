@@ -1,7 +1,7 @@
 #!/bin/bash
 clear
 # Initialise the Title Art
-file1="../art/titleart.ben"
+file1="../art/green.ben"
 while IFS= read -r line
 do
     echo "$line"
@@ -10,27 +10,31 @@ echo
 
 # Everybody clap your hands. I mean, here is the script.
 sleep 1
-echo "You're off to see the wizard. Well, maybe not - but this"
-echo "room is so green you might as well be in Emerald City."
-echo "Seriously. Think of the greenest thing you've ever seen,"
-echo "then add another suitcase full of green. It's that bad."
+echo "Du gehst zum Zauberer. Nun, vielleicht nicht - aber das hier"
+echo "das Zimmer ist so grün, dass Sie genauso gut in Emerald City sein könnten."
+echo "Ernsthaft. Denk an das Grünste, was du je gesehen hast"
+echo "dann fügen Sie einen weiteren Koffer voller Grün hinzu. Es ist so schlimm."
 echo
-echo "It's getting to you. Such pain. Is there a door? Who knows."
+echo "Es kommt zu dir. Solche Schmerzen. Gibt es eine Tür? Wer weiß."
 echo
-echo "What would you like to do?"
+echo "Was machst du jetz bloß?"
 
 # And here's what you could have won... 
 while true; do
     read -p "> " nsewuh
     case $nsewuh in
-        n ) echo "The green is a bit more intense over here. Oops." ;;
-        s ) echo "Such green. Much bad. Go back. SCHTAP." ;;
-        e ) ./mainroom.sh
+        n ) echo "Das Grün ist hier etwas intensiver. Hoppla." ;;
+        s ) echo "Such green. Much bad. Go back. SCHWUPP." ;;
+        o ) ./mainroom.sh
             exit ;;
-        w ) echo "You attempt to go west, but ALL YOU SEE IS GREEN." ;;
-		u ) echo "You think about 'using' green, but realise it's not legal in this country." ;;
-		h ) echo "You curl yourself up into a ball and rock back and forth." ;;
-        * ) echo "I'm sorry, I don't understand you. Commands are: n, e, s, w, u and h.";;
+        w ) echo "Du versuchst, nach Westen zu gehen, aber ALLES, WAS DU SEHST, IST GRÜN." ;;
+		b ) echo "Sie denken darüber nach, Grün zu „verwenden“, stellen aber fest, dass es in diesem Land nicht erlaubt ist." ;;
+		u ) echo "Du rollst dich zu einer Kugel zusammen und schaukelst hin und her." ;;
+        g ) ./green.sh
+            exit ;; 
+        h ) file3="../script/hilfe.ben"
+            cat $file3 ;; 
+        * ) echo "Es tut mir leid, ich verstehe dich nicht. Befehle sind: n, o, s, w, b, u, g und h.";;
     esac
 done
 

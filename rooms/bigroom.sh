@@ -1,7 +1,7 @@
 #!/bin/bash
 clear
 # Initialise the Title Art
-file1="../art/titleart.ben"
+file1="../art/bigroom.ben"
 while IFS= read -r line
 do
     echo "$line"
@@ -11,44 +11,48 @@ done <"$file1"
 # Obviously if you use this framework to create a game of your own, you can extend this massively.
 echo
 sleep 1
-echo "You step through the door and into what looks like a scene from a movie."
+echo "Du trittst durch die Tür und betrittst etwas, das aussieht wie eine Szene aus einem Film."
 echo
 sleep 3
-echo "There's a long table in front of you. Sat around it are several well-dressed"
-echo "people, both men and women, eating a very elaborate looking dinner."
+echo "Vor dir steht ein langer Tisch. Drumherum saßen mehrere gut gekleidete"
+echo "Personen, sowohl Männer als auch Frauen, die ein sehr kunstvoll aussehendes Abendessen zu sich nehmen."
 sleep 2
-echo "Weird."
+echo "Seltsam."
 echo
 sleep 3
-echo "There appears to have been a place laid at the table for you."
+echo "Anscheinend wurde ein Platz für Sie am Tisch gedeckt."
 echo
-sleep 5
-echo "Suddenly nervous, you take a seat and look around at the other diners."
-echo "Are these the people who summoned you here? You try to ask them, but"
-echo "seem to be rendered more speechless than a test subject in a portal game."
+sleep 4
+echo "Plötzlich nervös, nehmen Sie Platz und schauen sich die anderen Gäste an."
+echo "Sind das die Leute, die Sie hierher gerufen haben? Sie versuchen, sie zu fragen, aber"
+echo "scheinen sprachloser zu sein als eine Testperson in einem Portalspiel."
 echo
-sleep 5
+sleep 4
 echo
-echo "A waiter brings out a tray and places it in front of you. Lifting the lid,"
-echo "you find a weird rainbow coloured pill in front of you. Very 'Martix', you think"
-echo "to yourself. What does this mean? Are you supposed to take the pill?"
-echo "Is this some kind of test? And who ARE these people?!"
+echo "Ein Kellner bringt ein Tablett und stellt es vor Sie hin. Anheben des Deckels,"
+echo "Sie finden eine seltsame regenbogenfarbene Pille vor sich. Sehr 'Martix', denkst du"
+echo "zu dir selbst. Was bedeutet das? Soll ich die Pille nehmen?"
+echo "Ist das eine Art Test? Und wer SIND diese Leute?!"
 echo
-sleep 5
+sleep 4
 echo
-echo "What would you like to do?"
+echo "Was würdest du gern tun?"
 
 while true; do
     read -p "> " nsewuh
     case $nsewuh in
-        n ) echo "You get up and look around. Not much over here." ;;
-        s ) echo "You take a look at the decor of the room. It's pretty nice." ;;
-        e ) echo "There's a curtain - but no window behind it. How odd." ;;
-        w ) echo "WHO ARE THESE PEOPLE?!" ;;
-		u ) ./end.sh
+        n ) echo "Du stehst auf und siehst dich um. Nicht viel hier." ;;
+        s ) echo "Sie werfen einen Blick auf die Einrichtung des Zimmers. Es ist ziemlich nett." ;;
+        o ) echo "Da ist ein Vorhang - aber kein Fenster dahinter. Wie seltsam." ;;
+        w ) echo "WER SIND DIESE LEUTE?!" ;;
+		b ) ./end.sh
             exit ;;
-		h ) echo "You hug the person next to you. He feels cold, and doesn't move." ;;
-        * ) echo "I'm sorry, I don't understand you. Commands are: n, e, s, w, u and h.";;
+		u ) echo "Du umarmst die Person neben dir. Ihm ist kalt und er bewegt sich nicht." ;;
+        g ) ./bigroom.sh
+            exit ;; 
+        h ) file3="../script/hilfe.ben"
+            cat $file3 ;; 
+        * ) echo "Es tut mir leid, ich verstehe dich nicht. Befehle sind: n, o, s, w, b, u, g und h.";;
     esac
 done
 

@@ -1,7 +1,7 @@
 #!/bin/bash
 clear
 # Initialise the Title Art
-file1="titleart.ben"
+file1="../art/kroo2.ben"
 while IFS= read -r line
 do
     echo "$line"
@@ -10,29 +10,33 @@ echo
 
 # So here's a little story all about how this script got flip-turned upside down...
 sleep 1
-echo "You're in a corridor, but it's quite a small one. You got here"
-echo "the first time by hugging a statue of a kitten. Standard."
+echo "Du bist in einem Korridor, aber es ist ziemlich klein. Geh dahin"
+echo "das erste Mal, indem er eine Statue eines Kätzchens umarmt. Standard."
 echo
-echo "You see a glow coming from the rooms to your east and west, and"
-echo "there's a big, old looking door to the south of you."
+echo "Du siehst ein Leuchten aus den Räumen zu deinem Osten und Westen kommen, und"
+echo "südlich von dir ist eine große, alt aussehende Tür."
 echo
-echo "What would you like to do?"
+echo "Was möchtest du tun?"
 
 # Imma let you finish, but here's the room choices.
 
 while true; do
     read -p "> " nsewuh
     case $nsewuh in
-        n ) echo "You faceplant the wall. Idiot." ;;
+        n ) echo "Sie bepflanzen die Wand. UMPF." ;;
         s ) ./bigroom.sh
             exit ;;
-        e ) ./gameroom.sh 
+        o ) ./gameroom.sh 
             exit ;;
         w ) ./grue.sh
             exit ;;
-		u ) echo "There's nothing you can use right here." ;;
-		h ) echo "After hugging that cat you aren't sure you should try to hug yourself again." ;;
-        * ) echo "I'm sorry, I don't understand you. Commands are: n, e, s, w, u and h.";;
+		b ) echo "Hier gibt es nichts, was du verwenden könntest." ;;
+		u ) echo "Nachdem du diese Katze umarmt hast, bist du dir nicht sicher, ob du versuchen solltest, dich noch einmal zu umarmen." ;;
+        g ) ./kroo2.sh
+            exit ;; 
+        h ) file3="../script/hilfe.ben"
+            cat $file3 ;; 
+        * ) echo "Es tut mir leid, ich verstehe dich nicht. Befehle sind: n, o, s, w, b, u, g und h.";;
     esac
 done
 

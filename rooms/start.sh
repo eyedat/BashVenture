@@ -24,6 +24,8 @@ while IFS= read -r line
 do
 	echo "$line"
 done <"$file2"
+file3="../script/hilfe.ben"
+cat $file3
 read -p "Press [ENTER] to start..."
 
 #Okay, now that the introduction is out of the way, we can start the first room!
@@ -38,16 +40,16 @@ sleep 1
 # Here's where you introduce the room to the player. Be sure to tell them if there
 # Are exits - but don't give too much away. Make it fun for them to explore!
 echo
-echo "You awake to find yourself on the floor of a large room."
-echo "You still have your pillow, but your bed and duvet are gone."
-echo "You stand up, dazed and confused. It's a Thursday, or - at"
-echo "least - you think it is. You never could quite get the hang"
-echo "of Thursdays."
+echo "Du erwachst und findest dich auf dem Boden eines großen Raumes wieder."
+echo "Du hast noch dein Kissen, aber dein Bett und deine Bettdecke sind weg."
+echo "Du stehst auf, benommen und verwirrt. Es ist ein Donnerstag, oder - um"
+echo "zumindest - Sie denken, es ist. Du konntest nie ganz den Dreh raus bekommen"
+echo "von Donnerstagen."
 echo
-echo "You can just about see doors to the north, east, south and west."
-echo "It's kinda cold, and you're hungry."
+echo "Sie können gerade Türen im Norden, Osten, Süden und Westen sehen."
+echo "Es ist ziemlich kalt und du hast Hunger."
 echo
-echo "What would you like to do?"
+echo "Und was nun?"
 
 # Now we wait for their response - and send them somewhere accordingly.
 while true; do
@@ -57,13 +59,17 @@ while true; do
             exit ;;       # These lines will take the player to a new room - a new script file.
         s ) ./brown.sh 
             exit ;;       # Be sure to include 'exit' otherwise the game won't quit properly!
-        e ) ./red.sh
+        o ) ./red.sh
         	exit ;;
         w ) ./green.sh
         	exit ;;
-		u ) echo "There's nothing you can use right here." ;;     # Something to say? You can also just echo.
-		h ) echo "You give yourself a quick hug. It's not very satisfying." ;;
-        * ) echo "I'm sorry, I don't understand you. Commands are: n, e, s, w, u and h.";;
+		b ) echo "Hier gibt es nichts, was du verwenden könntest." ;;     # Something to say? You can also just echo.
+		u ) echo "Du umarmst dich schnell. Es ist nicht sehr befriedigend." ;;
+        g ) ./mainroom.sh
+            exit ;; 
+        h ) file3="../script/hilfe.ben"
+            cat $file3 ;; 
+        * ) echo "Es tut mir leid, ich verstehe dich nicht. Befehle sind: n, o, s, w, b, u, g und h.";;
     esac
 done
 

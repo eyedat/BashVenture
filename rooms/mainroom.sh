@@ -6,7 +6,7 @@ clear
 # start script over again.
 
 # Initialise the Title Art
-file1="../art/titleart.ben"
+file1="../art/mainroom.ben"
 while IFS= read -r line
 do
     echo "$line"
@@ -15,14 +15,14 @@ echo
 
 # Shakesphere wrote this, honest.
 sleep 1
-echo "You are back in the room you first woke up in."
-echo "It's huge. You can't really fathom how large, but it took"
-echo "long enough to get from that last room back to the middle of"
-echo "this one. You wonder how you got here, and who is responsible."
+echo "Du bist wieder in dem Raum, in dem du zuerst aufgewacht bist."
+echo "Es ist riesig. Sie können nicht wirklich ergründen, wie groß, aber es dauerte"
+echo "lange genug, um von diesem letzten Raum zurück in die Mitte zu gelangen"
+echo "Dieses hier. Sie fragen sich, wie Sie hierher gekommen sind und wer dafür verantwortlich ist."
 echo
-echo "You can just about see doors to the north, east, south and west."
+echo "Sie können gerade Türen im Norden, Osten, Süden und Westen sehen."
 echo
-echo "What would you like to do?"
+echo "Was schlägst du vor?"
 
 # And the room logic once again.
 while true; do
@@ -32,13 +32,17 @@ while true; do
             exit ;;
         s ) ./brown.sh
              exit ;;
-        e ) ./red.sh 
+        o ) ./red.sh 
             exit ;;
         w ) ./green.sh
             exit ;;
-		u ) echo "There's nothing you can use right here." ;;
-		h ) echo "You give yourself a quick hug. It's not very satisfying." ;;
-        * ) echo "I'm sorry, I don't understand you. Commands are: n, e, s, w, u and h.";;
+		b ) echo "Hier gibt es nichts, was du verwenden könntest." ;;
+		u ) echo "Du umarmst dich schnell. Es ist nicht sehr befriedigend." ;;
+        g ) ./mainroom.sh
+            exit ;; 
+        h ) file3="../script/hilfe.ben"
+            cat $file3 ;; 
+        * ) echo "Es tut mir leid, ich verstehe dich nicht. Befehle sind: n, o, s, w, b, u, g und h.";;
     esac
 done
 

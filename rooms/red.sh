@@ -1,7 +1,7 @@
 #!/bin/bash
 clear
 # Initialise the Title Art
-file1="../art/titleart.ben"
+file1="../art/red.ben"
 while IFS= read -r line
 do
     echo "$line"
@@ -10,27 +10,31 @@ echo
 
 # Set up the script for this room. It's a simple one!
 sleep 1
-echo "You're in a room that has an odd red glow to it."
-echo "Bookcases line the walls - dusty volumes with titles you"
-echo "can't quite make out. Somehow they seem ancient."
+echo "Du bist in einem Raum, der einen seltsamen roten Schimmer hat."
+echo "Bücherregale säumen die Wände – verstaubte Bände mit Titeln"
+echo "kann nicht recht erkennen. Irgendwie wirken sie uralt."
 echo
-echo "There's a very comfortable looking chair in the corner."
-echo "The only exit is to the west, back in the direction you came."
+echo "In der Ecke steht ein sehr bequem aussehender Stuhl."
+echo "Der einzige Ausgang befindet sich im Westen, zurück in die Richtung, aus der Sie gekommen sind."
 echo
-echo "What would you like to do?"
+echo "Und was nun?"
 
 # And the choices go here.
 while true; do
     read -p "> " nsewuh
     case $nsewuh in
-        n ) echo "Face, meet wall. Wall, meet Face." ;;
-        s ) echo "You can't walk through walls." ;;
-        e ) echo "Nothing but wall here." ;;
+        n ) echo "Gesicht, Wand treffen. Wand, triff Face." ;;
+        s ) echo "Man kann nicht durch Wände gehen." ;;
+        o ) echo "Hier nichts als Mauer." ;;
         w ) ./mainroom.sh
             exit ;;
-		u ) echo "You sit in the comfortable chair. It's like sitting on a cloud." ;;
-		h ) echo "You give yourself a hug, hoping that the books won't judge you." ;;
-        * ) echo "I'm sorry, I don't understand you. Commands are: n, e, s, w, u and h.";;
+		b ) echo "Sie sitzen in dem bequemen Sessel. Es ist, als würde man auf einer Wolke sitzen." ;;
+		u ) echo "Du umarmst dich selbst und hoffst, dass die Bücher dich nicht verurteilen." ;;
+        g ) ./red.sh
+            exit ;; 
+        h ) file3="../script/hilfe.ben"
+            cat $file3 ;; 
+        * ) echo "Es tut mir leid, ich verstehe dich nicht. Befehle sind: n, o, s, w, b, u, g und h.";;
     esac
 done
 

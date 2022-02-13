@@ -1,7 +1,7 @@
 #!/bin/bash
 clear
 # Initialise the Title Art
-file1="../art/titleart.ben"
+file1="../art/gamerroom.ben"
 while IFS= read -r line
 do
     echo "$line"
@@ -12,46 +12,52 @@ echo
 # Just because something looks shiny and fun, doesn't make it any
 # less deadly.
 sleep 1
-echo "This room is small, but has a pretty sweet looking computer"
-echo "sat on a desk in the middle of it. Is that... YES!"
-echo "Steam is installed, and it looks like the entire library of"
-echo "games is installed! This is one epic gaming rig."
+echo "Dieses Zimmer ist klein, hat aber einen ziemlich süß aussehenden Computer"
+echo "auf einem Schreibtisch in der Mitte. Heißt das ja!"
+echo "Steam ist installiert, und es sieht aus wie die gesamte Bibliothek von"
+echo "Spielen die installiert sind! Dies ist ein epischer Gaming-Rig."
 echo
-echo "The only way out is east, back the way you came... but..."
-echo "shiny. Maybe it'd be rude NOT to sit down and game a little."
+echo "Der einzige Ausweg ist nach Osten, den Weg zurück, den du gekommen bist, aber..."
+echo "glänzend. Vielleicht wäre es unhöflich, sich NICHT hinzusetzen und ein bisschen zu spielen."
 echo
-echo "What would you like to do?"
+echo "Was steht an?"
 
 while true; do
     read -p "> " nsewuh
     case $nsewuh in
-        n ) echo "WALL EQUALS TRUE." ;;
-        s ) echo "Nope. Wall." ;;
+        n ) echo "WAND IST DA." ;;
+        s ) echo "Nö. Mauer." ;;
         w ) ./kroo2.sh
             exit ;;
-        e ) echo "You were going to go east, then you took a wall to the face." ;;
-		u ) echo
-            echo "You sit and game. And game. And game. You forget about time,"
-            echo "and food, and people. You realise that you cannot get up. You can't"
-            echo "move. You are stuck to the chair."
+        o ) echo "Du wolltest nach Osten gehen, dann hast du eine Wand ins Gesicht geschlagen." ;;
+		b ) echo
+            file1="../art/bigfinish.ben"
+            echo "Sie sitzen und spielen. Und Spiel. Und Spiel. Du vergisst die Zeit,"
+            echo "und Essen und Menschen. Du merkst, dass du nicht aufstehen kannst. Du kannst dich nicht"
+            echo "bewegen. Du klebst am Stuhl fest!"
             echo
             sleep 4
-            echo "Days go by. Weeks. You've played game after game, but..."
+            echo "Tage vergehen. Wochen. Du hast ein Spiel nach dem anderen gespielt, aber..."
             echo
-            echo "Your body is giving up. With your final breath you come to realise that"
-            echo "you cannot live on gamerpoints alone. You close your eyes for the last time."
+            echo "Dein Körper gibt auf. Mit deinem letzten Atemzug wird dir das klar"
+            echo "von gamerpoints alleine kann man nicht leben. Du schließt zum letzten Mal deine Augen."
             sleep 4
             echo
+            cat $file1
             echo
-            echo "YOU ARE DEAD."
+            echo "DU BIST TOT."
             echo
             read -p "Press [ENTER] to try again..."
             ./mainroom.sh
             exit
 
         ;;
-		h ) echo "You hug the computer. Nerd." ;;
-        * ) echo "I'm sorry, I don't understand you. Commands are: n, e, s, w, u and h.";;
+		u ) echo "Du umarmst den Computer. Nerd." ;;
+        g ) ./gameroom.sh
+            exit ;; 
+        h ) file3="../script/hilfe.ben"
+            cat $file3 ;; 
+        * ) echo "Es tut mir leid, ich verstehe dich nicht. Befehle sind: n, o, s, w, b, u, g und h.";;
     esac
 done
 

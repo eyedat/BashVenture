@@ -5,7 +5,7 @@ clear
 # narrative of the story. This is why there are two versions - foyer and foyer2.
 
 # Initialise the Title Art
-file1="../art/titleart.ben"
+file1="../art/kroo.ben"
 while IFS= read -r line
 do
     echo "$line"
@@ -14,35 +14,39 @@ echo
 
 # It's script time again...
 sleep 1
-echo "What. The. Actual. Fuck."
+echo "Was. Der. Tatsächlich. Oh MANN...."
 echo
 sleep 3
-echo "You hugged a statue of a beautiful kitten. As you do."
+echo "Du hast die Statue eines wunderschönen Kätzchens umarmt. Wie dem auch sei...."
 echo
-echo "But you weren't expecting it to come to life and transport"
-echo "you to another mystery room. This is getting a bit weird."
+echo "Du hast nicht erwartet, dass es zum Leben erweckt und transportiert wird"
+echo "Sie in einen anderen Mystery Room. Das wird etwas seltsam."
 echo
-echo "You now seem to find yourself in a small-ish corridor. You can"
-echo "see a glow coming from the rooms to your east and west, and"
-echo "there's a big, old looking door south of you."
+echo "Sie scheinen sich jetzt in einem kleineren Korridor zu befinden. Sie können"
+echo "einen Schein sehen, der von den Räumen aus Osten und Westen kommt, und"
+echo "südlich von dir ist eine große, alt aussehende Tür."
 echo
-echo "What would you like to do?"
+echo "Und was machst du jetzt?"
 
 # And once again the room logic.
 
 while true; do
     read -p "> " nsewuh
     case $nsewuh in
-        n ) echo "You faceplant the wall. Idiot." ;;
+        n ) echo "Du bepflanzt den Wand. Dummkopf." ;;
         s ) ./bigroom.sh
              exit ;;
-        e ) ./gameroom.sh
+        o ) ./gameroom.sh
             exit ;;
         w ) ./grue.sh
             exit ;;
-		u ) echo "There's nothing you can use right here." ;;
-		h ) echo "After hugging that cat you aren't sure you should try to hug yourself again." ;;
-        * ) echo "I'm sorry, I don't understand you. Commands are: n, e, s, w, u and h.";;
+		b ) echo "Hier gibt es nichts, was du verwenden könntest." ;;
+		u ) echo "Nachdem du diese Katze umarmt hast, bist du dir nicht sicher, ob du versuchen solltest, dich noch einmal zu umarmen." ;;
+        g ) ./kroo.sh
+            exit ;; 
+        h ) file3="../script/hilfe.ben"
+            cat $file3 ;; 
+        * ) echo "Es tut mir leid, ich verstehe dich nicht. Befehle sind: n, o, s, w, b, u, g und h.";;
     esac
 done
 

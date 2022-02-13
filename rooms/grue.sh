@@ -1,7 +1,7 @@
 #!/bin/bash
 clear
 # Initialise the Title Art
-file1="../art/titleart.ben"
+file1="../art/bigfinish.ben"
 while IFS= read -r line
 do
     echo "$line"
@@ -10,25 +10,25 @@ echo
 
 # I like this room. There is no way to get out of it alive.
 sleep 1
-echo "This is a long room, and ask you walk down it, you see a person."
-echo "Finally! Another person! You start to run toward the shadowy figure"
-echo "but then stop dead. This isn't... no... it can't be. It's... it's..."
-echo "IT'S A GRUE."
+echo "Dies ist ein langer Raum, und wenn Sie ihn hinuntergehen, sehen Sie eine Person."
+echo "Endlich! Eine andere Person! Du rennst auf die schattenhafte Gestalt zu"
+echo "aber dann halt tot. Das ist nicht... nein... das kann nicht sein. Es ist ... es ist ..."
+echo "ES IST EIN GRUE."
 sleep 3
 echo
-echo "No. NO! You cry, as he sits you down and, rather than beating you to"
-echo "death, starts to read you some of his Grue Poetry. It's awful. Your"
-echo "brain starts to melt and, as a result, your nose starts bleeding."
+echo "Nein. NEIN! Sie weinen, als er sich zu Ihnen setzt und, anstatt Sie zu schlagen"
+echo "Tod, fängt an, Ihnen einige seiner Grue Poetry vorzulesen. Es ist schrecklich. Deine"
+echo "Das Gehirn beginnt zu schmelzen und als Folge beginnt Ihre Nase zu bluten."
 echo
 sleep 5
-echo "You start to feel dizzy. You can't think straight. As you fall to the"
-            echo "floor, your own blood and brains all around you, you begin"
-            echo "to wonder why the grue didn't just kill you quickly like"
-            echo "most do. Bloody liberal arts students."
+echo "Ihnen wird schwindelig. Du kannst nicht klar denken. Wie Sie auf die fallen"
+            echo "Boden, dein eigenes Blut und Gehirn überall um dich herum, beginnst du"
+            echo "sich zu fragen, warum der Grue dich nicht einfach so schnell getötet hat"
+            echo "die meisten tun es. Verdammte Studenten der Geisteswissenschaften."
             echo
-            echo "You slip into unconciousness."
+            echo "Sie gleiten in die Bewusstlosigkeit."
             sleep 4
-            echo "YOU ARE DEAD."
+            echo "DU BIST TOT."
             echo
             read -p "Press [ENTER] to try again..."
             ./mainroom.sh

@@ -1,112 +1,112 @@
-BashVenture - Adventure for Bash
-=================================
+BashVenture - Abenteuer für Bash
+================================
 
-You are in a git repository. Code surrounds you. There are directories to the north, south, east, and west.<br>There is a README file here!
+Sie befinden sich in einem Git-Repository. Code umgibt Sie. Es gibt Verzeichnisse im Norden, Süden, Osten und Westen.<br>Hier gibt es eine README-Datei!
 
 
-Introduction
+Einführung
 ------------
 
-One of the very first computer games I played was Colossal Cave, aka 'Adventure'. Widely regarded as one of THE original classic text-based adventure games, pre-dating Zork and others, it set the scene for a new era of human-computer interaction and inspired countless software developers to build things that had a more human touch.
+Eines der allerersten Computerspiele, die ich gespielt habe, war Colossal Cave, auch bekannt als „Adventure“. Weithin als eines DER originalen klassischen textbasierten Adventure-Spiele angesehen, das vor Zork und anderen entstand, bereitete es die Kulisse für eine neue Ära der Mensch-Computer-Interaktion und inspirierte unzählige Softwareentwickler, Dinge zu bauen, die eine menschlichere Note hatten.
 
-In this age of high-performance graphics and hyper-realistic gameplay, I think it's important to remember that a cleverly told story beats a well-rendered polygon any day.
+Im Zeitalter von Hochleistungsgrafiken und hyperrealistischem Gameplay ist es meiner Meinung nach wichtig, sich daran zu erinnern, dass eine klug erzählte Geschichte jeden Tag ein gut gerendertes Polygon schlägt.
 
-That's why I build BashVenture. I wanted a way to bring back a bit of life into the text-based adventure game format, without the need to be an expert coder. BashVenture is a simple set of easy-to-edit scripts and logic files that you can re-word and re-engineer to create games as simple or as complex as you like.
+Deshalb baue ich BashVenture. Ich wollte einen Weg finden, wieder ein bisschen Leben in das textbasierte Abenteuerspielformat zu bringen, ohne ein erfahrener Programmierer sein zu müssen. BashVenture ist ein einfacher Satz einfach zu bearbeitender Skripte und Logikdateien, die Sie umformulieren und umgestalten können, um Spiele zu erstellen, die so einfach oder so komplex sind, wie Sie möchten.
 
-Play the demo, fork the repo, and have a go at making an immersive, well-told adventure of your own! All I ask is that you link back here in the game introduction, so that others can see how easy it is to make a game of their own too.
+Spielen Sie die Demo, forken Sie das Repo und versuchen Sie, Ihr eigenes fesselndes, gut erzähltes Abenteuer zu erschaffen! Alles, worum ich bitte, ist, dass Sie hier in der Spieleinführung zurückverlinken, damit andere sehen können, wie einfach es ist, auch ein eigenes Spiel zu erstellen.
 
 
-Play the demo of BashVenture!
+Spielen Sie die Demo von BashVenture!
 -----------------------------
 
-You don't need to download the repo to try out the game mechanics! BashVenture is designed to run over a telnet/ssh connection. I've set up a test instance that anyone can play - so jump onto the server and have a go!
+Sie müssen das Repo nicht herunterladen, um die Spielmechanik auszuprobieren! BashVenture wurde entwickelt, um über eine Telnet/SSH-Verbindung ausgeführt zu werden. Ich habe eine Testinstanz eingerichtet, die jeder spielen kann – also spring auf den Server und probiere es aus!
 
 ```bash:
 ssh bashventure@gkly.co
 ```
 
-Password:<br>
+Passwort:<br>
 ```
 xyzzy
 ```
+<img src="bild2.png" width="516" height="423" alt="">
+<img src="bild1.png" width="539" height="550" alt="">
+
+NB - Wenn Sie ein Windows-Benutzer sind, können Sie trotzdem am Spaß teilnehmen. Laden Sie [PuTTY](http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html) herunter und verwenden Sie die obigen Anmeldeinformationen. Einfach!
 
 
-NB - If you're a Windows user, you can still join in the fun. Download [PuTTY](http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html) and use the credentials above. Simples!
 
-
-
-How it all works
+Wie das alles funktioniert
 ----------------
 
-BashVenture - or any game you create with it - is a simple set of bash script files that display artwork and text, wait for a user's input, and acts on that input accordingly. Usually this sees a player move around a 'map' of interconnected script files, called rooms, to discover where they are, what they have to do, and where to go next.
+BashVenture - oder jedes Spiel, das Sie damit erstellen - ist ein einfacher Satz von Bash-Skriptdateien, die Grafiken und Text anzeigen, auf die Eingabe eines Benutzers warten und entsprechend auf diese Eingabe reagieren. Normalerweise bewegt sich ein Spieler dabei auf einer „Karte“ aus miteinander verbundenen Skriptdateien, Räumen genannt, um herauszufinden, wo er sich befindet, was er tun muss und wohin er als nächstes gehen muss.
 
-Games can also have logic with various degrees of complexity, from a simple set of switches and levers (as in the demo) right through to complex codebreaking or secret-sharing. In BashVenture, logic is all file-based - when you flick a switch, for example, an entry in the corresponding logic file is changed. This means logic states transcend rooms and player death - you can reset logic as and when you want to, rather than it being tied tod a specific room or area, or lifetime if you're the kind of player that dies a lot.
+Spiele können auch Logik mit unterschiedlichem Komplexitätsgrad haben, von einer einfachen Reihe von Schaltern und Hebeln (wie in der Demo) bis hin zu komplexem Codebreaking oder Secret-Sharing. In BashVenture ist die Logik vollständig dateibasiert – wenn Sie beispielsweise einen Schalter umlegen, wird ein Eintrag in der entsprechenden Logikdatei geändert. Dies bedeutet, dass Logikzustände Räume und den Tod von Spielern überschreiten – Sie können die Logik nach Belieben zurücksetzen, anstatt sie an einen bestimmten Raum oder Bereich oder eine bestimmte Lebensdauer zu binden, wenn Sie die Art von Spieler sind, die häufig stirbt.
 
-A player makes their way through the game by issuing commands. The default commants are north, south, east, west, use and hug. Because hugging is better than shooting. The user decides what course of action to take by typing in n, s, e, w, u or h respectively. You can customise this completely by adding your own commands.
+Ein Spieler bewegt sich durch das Spiel, indem er Befehle erteilt. Die voreingestellten Befehle sind north, south, east, west, use und hug. Denn umarmen ist besser als schießen. Der Benutzer entscheidet, welche Vorgehensweise zu ergreifen ist, indem er jeweils n, s, e, w, u oder h eingibt. Sie können dies vollständig anpassen, indem Sie Ihre eigenen Befehle hinzufügen.
 
-There's an introduction and a bit of an endgame - and some baddies and things that can kill you along the way. I strongly suggest that, before forking and trying to write a game of your own, you play the demo and get a feel for how the gameplay mechanics work.
+Es gibt eine Einführung und eine Art Endspiel – und einige Bösewichte und Dinge, die Sie auf dem Weg töten können. Ich empfehle dringend, dass Sie, bevor Sie forken und versuchen, ein eigenes Spiel zu schreiben, die Demo spielen und ein Gefühl dafür bekommen, wie die Spielmechanik funktioniert.
 
-The magic of a good adventure game is in the storytelling! Script well, test often, and don't over-complicate things.
+Die Magie eines guten Abenteuerspiels liegt im Geschichtenerzählen! Schreiben Sie gut, testen Sie oft und verkomplizieren Sie die Dinge nicht..
 
 
 
 What's included in this framework?
 ----------------------------------
 
-There are four types of file in this project, split into their respective subdirectories:
+In diesem Projekt gibt es vier Dateitypen, die in ihre jeweiligen Unterverzeichnisse aufgeteilt sind:
 
 ### Art
-Everyone loves a bit of ASCII art, right? There are a few sample files with artwork included in here - but if you're building a game yourself and want to inclide more artwork, this is the place to put it. The title art is displayed in every room, for consistency.
+Jeder liebt ein bisschen ASCII-Kunst, oder? Hier sind ein paar Beispieldateien mit Grafiken enthalten - aber wenn Sie selbst ein Spiel erstellen und mehr Grafiken einfügen möchten, ist dies der richtige Ort dafür. Das Titelbild wird aus Gründen der Einheitlichkeit in jedem Raum angezeigt.
 
 ### Rooms
-Every single 'room' in the game is stored in a separate room file. This is a metaphorical room - it could be a wooded area, a cave, the moon, spaaaaaace, whatever. In this demo there are rooms and corridors - the files look identical. It's all in the wording.
+Jeder einzelne „Raum“ im Spiel wird in einer separaten Raumdatei gespeichert. Dies ist ein metaphorischer Raum – es könnte ein Waldgebiet sein, eine Höhle, der Mond, Spaaaaace, was auch immer. In dieser Demo gibt es Räume und Korridore - die Dateien sehen identisch aus. Es ist alles im Wortlaut.
 
 ### Script
-While the room files have the majority of each room's special wording in them, the files in this folder contain longer bits of story and the introduction text. If you want to display large chunks of text from files in your game, the scripts folder is where you want to place them.
+Während die Raumdateien den Großteil der speziellen Formulierungen jedes Raums enthalten, enthalten die Dateien in diesem Ordner längere Geschichten und den Einführungstext. Wenn Sie große Textblöcke aus Dateien in Ihrem Spiel anzeigen möchten, sollten Sie sie im Skriptordner ablegen.
 
 ### Logic
-What makes a text-based adventure more than a simple maze game is logic. Here you can set switches, have users match words or find secrets. In the demo game, there's one piece of logic and one piece only - but you can add as much logic as you like! Keep it tidy - the logic all lives in the logic folder.
+Was ein textbasiertes Abenteuer zu mehr als einem einfachen Labyrinthspiel macht, ist die Logik. Hier können Sie Schalter setzen, Benutzer Wörter zuordnen lassen oder Geheimnisse finden. Im Demospiel gibt es nur ein Stück Logik und nur ein Stück - aber Sie können so viel Logik hinzufügen, wie Sie möchten! Ordnung halten – die Logik lebt im Logikordner.
 
 
 
 Setting it up yourself
 ----------------------
 
-If you play the demo, you'll notice that one only has to log into the server and the game starts automatically. In this instance, I've put the user inside a chroot jail and set the ./adventure file as the shell - so whatever happens, the player can't break out of the game and go rummaging through system files.
+Wenn Sie die Demo spielen, werden Sie feststellen, dass Sie sich nur beim Server anmelden müssen und das Spiel automatisch startet. In diesem Fall habe ich den Benutzer in ein Chroot-Gefängnis gesteckt und die ./adventure-Datei als Shell festgelegt – was auch immer passiert, der Spieler kann nicht aus dem Spiel ausbrechen und Systemdateien durchsuchen.
 
 ### Allowing for Multiple Players
 
-If you take a look at the ./adventure.sh script, you'll notice that multiple players are handled by the spinning up of a new game instance for each player connecting to the server. BashVenture has a dependancy on uuid-runtime here, as it generates a new, and temporary, unique identifier for each new player.
+Wenn Sie einen Blick auf das Skript ./adventure.sh werfen, werden Sie feststellen, dass mehrere Spieler behandelt werden, indem für jeden Spieler, der sich mit dem Server verbindet, eine neue Spielinstanz hochgefahren wird. BashVenture hat hier eine Abhängigkeit von uuid-runtime, da es eine neue und vorübergehende eindeutige Kennung für jeden neuen Spieler generiert.
 
-The script checks to see whether the uuidgen runtime is installed and takes the appropriate action - so you don't need to edit the file to enable or disable multi-user support. All you need to do is ensure that the uuid-runtime dependancy is installed on your server (and inside your chroot jail if appropriate). To do this, simply install the following package:
+Das Skript prüft, ob die uuidgen-Laufzeitumgebung installiert ist, und ergreift die entsprechende Aktion – Sie müssen die Datei also nicht bearbeiten, um die Mehrbenutzerunterstützung zu aktivieren oder zu deaktivieren. Alles, was Sie tun müssen, ist sicherzustellen, dass die uuid-runtime-Abhängigkeit auf Ihrem Server (und gegebenenfalls in Ihrem Chroot-Gefängnis) installiert ist. Installieren Sie dazu einfach das folgende Paket:
 
 ```bash:
 sudo apt-get install uuid-runtime
 ```
 
-Note that uuidgen ships with OS X and OS X Server, but isn't installed by default in some linux distros.
+Beachten Sie, dass uuidgen mit OS X und OS X Server geliefert wird, aber in einigen Linux-Distributionen nicht standardmäßig installiert ist.
 
-If you don't want to enable multiple players at once, simply ensure all of the game files are kept within the correct folder structure, install it somewhere (usually within a user's home folder) and run the ./adventure file.
+Wenn Sie nicht mehrere Spieler gleichzeitig aktivieren möchten, stellen Sie einfach sicher, dass sich alle Spieldateien in der richtigen Ordnerstruktur befinden, installieren Sie sie irgendwo (normalerweise im Home-Ordner eines Benutzers) und führen Sie die ./adventure-Datei aus
 
-### Trouble running the game? Getting weird errors?
+### Probleme beim Ausführen des Spiels? Komische Fehler bekommen?
 
-Check the permissions on the 'adventure' file and the main folder for the game. If you need to, chmod +x to make all of the game files executable.
+Überprüfen Sie die Berechtigungen für die „Adventure“-Datei und den Hauptordner für das Spiel. Wenn nötig, chmod +x, um alle Spieldateien ausführbar zu machen.
 
 
 
-Contributing & License
+Beitrag & Lizenz
 --------------
 
-Future versions of this framework are planned, with massive extensions to the logic side of things. I welcome any and all contributions, so please feel free to contribute. If you have ideas for the direction that the framework should take, please don't hesitate to [get in touch](mailto:mail@bennunney.com).
+Zukünftige Versionen dieses Frameworks sind geplant, mit massiven Erweiterungen der logischen Seite der Dinge. Ich freue mich über jeden Beitrag, also zögern Sie nicht, einen Beitrag zu leisten. Wenn Sie Ideen für die Richtung haben, die das Framework einschlagen sollte, zögern Sie bitte nicht, sich mit uns in Verbindung zu setzen (mailto:mail@bennunney.com).
 
-This code is relased under the MIT License. Please see the LICENSE file for more information on what this means and how to make attributions.
+Dieser Code wird unter der MIT-Lizenz veröffentlicht. Weitere Informationen dazu, was dies bedeutet und wie Zuschreibungen vorgenommen werden, finden Sie in der LIZENZ-Datei.
 
 
 
 Acknowledgements
 ----------------
 
-Huge thanks to [@drwilco](https://github.com/drwilco/), [@penman](https://github.com/penman), & [@kfouwels](https://github.com/kfouwels) for helping me see clearly when I was bash-ing my head against a brick wall.
-<br>Bash-ing? See what I did there?
+Thanks to [@apetro](https://github.com/apetro/BashVenture.git) it ist the Original: https://github.com/apetro/BashVenture.git
 
-Comments, questions, suggestions? [Get in touch.](mailto:mail@bennunney.com).
+Comments, questions, suggestions? [Get in touch.](mailto:eyedat@gmail.com).
