@@ -1,6 +1,7 @@
 #!/bin/bash
 
 # sudo apt-get install figlet
+
 # schow all fonds:
 # for f in /usr/share/figlet/*.[tf]lf; do toilet {,-f}$f:r:t; done
 #
@@ -30,7 +31,8 @@
 #                                  
 #
 #
-#
+
+# sudo apt-get install uuid-runtime
 
 
 
